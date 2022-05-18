@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:background="@drawable/background_buttons"
+    android:elevation="20dp"
+    android:scaleX="0.9"
+    android:scaleY="0.9"
+    tools:ignore="UnusedAttribute">
+
+    <ImageView
+        android:id="@+id/imgItem"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:mipmap/sym_def_app_icon"
+        tools:srcCompat="@android:mipmap/sym_def_app_icon" />
+
+    <TextView
+        android:id="@+id/nombreProducto"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="nombre producto par awd awdawjdkawdjawdjawd"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textColorLink="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgItem"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toStartOf="@+id/imgItem"
+        app:layout_constraintTop_toBottomOf="@+id/imgItem" />
+
+    <TextView
+        android:id="@+id/precioProductoDescuento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="80.30$"
+        android:textColor="#029C08"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textColorLink="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/nombreProducto"
+        app:layout_constraintTop_toBottomOf="@+id/nombreProducto" />
+
+    <TextView
+        android:id="@+id/stockProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Quedan {0} en stock"
+        android:textColor="#029C08"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textColorLink="#000000"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/precioProductoDescuento"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/precioProductoDescuento"
+        app:layout_constraintTop_toBottomOf="@+id/precioProductoDescuento" />
+
+    <TextView
+        android:id="@+id/distribuidorProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="distribuidor"
+        android:textColor="#000000"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textColorLink="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/stockProducto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/stockProducto"
+        app:layout_constraintTop_toBottomOf="@+id/stockProducto" />
+
+    <TextView
+        android:id="@+id/descuentoProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:drawableLeft="@drawable/ic_baseline_star_rate_24"
+        android:text="4.8"
+        android:textColor="#FF3D00"
+        android:textColorHighlight="#000000"
+        android:textColorHint="#000000"
+        android:textColorLink="#000000"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/stockProducto"
+        app:layout_constraintTop_toTopOf="@+id/stockProducto" />
+</android.support.constraint.ConstraintLayout>

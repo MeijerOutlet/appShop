@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tallaNombre">dropDownMenuExample</string>
+    <string-array name="tallaLista">
+        <item></item>
+    </string-array>
+</resources>

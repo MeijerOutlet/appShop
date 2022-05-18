@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.appshop.view_item">
+
+    <Button
+        android:id="@+id/botonAnhadirCarrito"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/comprar_button"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:soundEffectsEnabled="true"
+        android:text="AÑADIR AL CARRITO"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.863"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/buttonAddView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/comprar_button"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:longClickable="true"
+        android:onClick="onClickAddRemoveButtons"
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/contadorProductosView"
+        app:layout_constraintEnd_toStartOf="@+id/contadorProductosView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/contadorProductosView"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/buttonRemoveView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/comprar_button"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:longClickable="true"
+        android:onClick="onClickAddRemoveButtons"
+        android:text="-"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/contadorProductosView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/contadorProductosView"
+        app:layout_constraintTop_toTopOf="@+id/contadorProductosView"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:targetApi="lollipop" />
+
+    <EditText
+        android:id="@+id/contadorProductosView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_buttons"
+        android:elevation="5dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="3"
+        android:numeric="integer"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/botonAnhadirCarrito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreProductoView"
+        app:layout_constraintVertical_bias="0.822"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:targetApi="lollipop" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgProductoView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/descuentoProductoView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_menu_gallery" />
+
+            <TextView
+                android:id="@+id/precioProductoDescuentoView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="$"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nombreProductoView" />
+
+            <TextView
+                android:id="@+id/descuentoProductoView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:drawableLeft="@drawable/ic_baseline_star_rate_24"
+                android:text="5.0"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/stockProductoView"
+                app:layout_constraintTop_toTopOf="@+id/precioProductoDescuentoView" />
+
+            <TextView
+                android:id="@+id/stockProductoView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:text="STOCK"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/precioProductoDescuentoView"
+                app:layout_constraintStart_toEndOf="@+id/precioProductoDescuentoView"
+                app:layout_constraintTop_toTopOf="@+id/precioProductoDescuentoView" />
+
+            <TextView
+                android:id="@+id/nombreProductoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:maxLength="150"
+                android:text="xReVeRSeDx#5335 El Cazurro se fue de la secta 🙁 El Cazurro de @xReVeRSeDx, a entrado a esta secta Minotauro 🎉🤗 "
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProductoView" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
