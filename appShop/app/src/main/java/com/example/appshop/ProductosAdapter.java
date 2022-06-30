@@ -319,15 +319,15 @@ public class ProductosAdapter extends BaseAdapter {
 
         stockP.setText("Quedan "+producto.getCantidad()+" disponibles");
         if ((producto.getDescuento() > 0)) {
-            descuento.setText("-" + producto.getDescuento() + "$");
+            descuento.setText("-" + producto.getDescuento() + "€");
             precioP.setPaintFlags(precioP.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            precioPDescunto.setText(producto.getImporte_total_descontado()+"$");
-            precioP.setText(producto.getPrecio_total()+"$");
+            precioPDescunto.setText(producto.getImporte_total_descontado()+"€");
+            precioP.setText(producto.getPrecio_total()+"€");
         } else {
             descuento.setText("");
             precioPDescunto.setText("");
             precioP.setTextSize(15);
-            precioP.setText(producto.getPrecio_total()+"$");
+            precioP.setText(producto.getPrecio_total()+"€");
         }
         distribuidorP.setText("Tienda: "+producto.getId_com().getNombre());
         return viewInflado;

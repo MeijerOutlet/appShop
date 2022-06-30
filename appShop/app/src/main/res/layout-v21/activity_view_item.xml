@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:text="$"
+                    android:text="€"
                     android:textColor="@color/green"
                     android:textSize="25sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:text="$"
+                    android:text="€"
                     android:textColor="@color/black"
                     android:textSize="17sp"
                     android:textStyle="italic"
@@ -154,14 +154,38 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/categoriaProductoView" />
 
+
                 <Spinner
                     android:id="@+id/tallas"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="343dp"
+                    android:layout_width="56dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:drawable/spinner_background"
+                    android:popupBackground="@android:drawable/spinner_dropdown_background"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="@+id/precioProductoDescuentoView"
-                    app:layout_constraintTop_toBottomOf="@+id/precioProductoDescuentoView"/>
+                    app:layout_constraintTop_toBottomOf="@+id/precioProductoDescuentoView" />
+
+                <TextView
+                    android:id="@+id/TextTallaTitle"
+                    android:layout_width="51dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLength="150"
+                    android:text="Talla: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/precioProductoDescuentoView" />
 
             </android.support.constraint.ConstraintLayout>
 

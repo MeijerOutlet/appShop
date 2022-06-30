@@ -31,8 +31,8 @@ public class CarritoAdapter extends RecyclerView.Adapter<CarritoAdapter.HolderPr
     @Override
     public void onBindViewHolder(@NonNull HolderProductos holderProductos, @SuppressLint("RecyclerView") int position) {
         holderProductos.nombreP.setText(productos.get(position).getNombre());
-        holderProductos.precioP.setText(String.valueOf(productos.get(position).getPrecio())+"$");
-        holderProductos.precioTotalP.setText(String.valueOf(productos.get(position).getPrecio()*productos.get(position).getCantidad())+"$");
+        holderProductos.precioP.setText(String.valueOf(productos.get(position).getPrecio())+"€");
+        holderProductos.precioTotalP.setText(String.valueOf(productos.get(position).getPrecio()*productos.get(position).getCantidad())+"€");
         holderProductos.cantidad.setText(String.valueOf(productos.get(position).getCantidad()));
         holderProductos.nombreComercio.setText(productos.get(position).getComercio_Nombre());
         holderProductos.add.setOnClickListener(new View.OnClickListener() {

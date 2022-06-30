@@ -64,9 +64,9 @@ public class carrito_compra extends AppCompatActivity {
         }
 
         totalA = totalProductos + costes + ivaA;
-        totalPrecioProductos.setText(String.format("%.2f", totalProductos)+"$");
-        costesEnvio.setText(String.format("%.2f", costes)+"$");
-        iva.setText(String.format("%.2f", ivaA)+"$");
-        total.setText(String.format("%.2f", totalA)+"$");
+        totalPrecioProductos.setText(String.format("%.2f", totalProductos)+"€");
+        costesEnvio.setText(String.format("%.2f", costes)+"€");
+        iva.setText(String.format("%.2f", ivaA)+"€");
+        total.setText(String.format("%.2f", totalA)+"€");
     }
 }

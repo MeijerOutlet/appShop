@@ -114,13 +114,13 @@ public class view_item extends AppCompatActivity {
         descripcionProducto.setText(i.getStringExtra(("descripcionProducto")));
         if(i.getDoubleExtra("descuentoProducto",0f) > 0){
             precioProducto.setPaintFlags(precioProducto.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            precioProductoDescuento.setText(i.getDoubleExtra("precioProductoDescuento",-1)+"$");
-            precioProducto.setText(i.getDoubleExtra("precioProducto",-1)+"$");
-            descuentoProducto.setText("-"+i.getDoubleExtra("descuentoProducto",0f)+"$");
+            precioProductoDescuento.setText(i.getDoubleExtra("precioProductoDescuento",-1)+"€");
+            precioProducto.setText(i.getDoubleExtra("precioProducto",-1)+"€");
+            descuentoProducto.setText("-"+i.getDoubleExtra("descuentoProducto",0f)+"€");
         }else{
             precioProductoDescuento.setText("");
             precioProducto.setTextSize(25);
-            precioProducto.setText(i.getDoubleExtra("precioProducto",-1)+"$");
+            precioProducto.setText(i.getDoubleExtra("precioProducto",-1)+"€");
             descuentoProducto.setText("");
         }
 
